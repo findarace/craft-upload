@@ -12,7 +12,7 @@
         uploader.customClass ? uploader.customClass : null,
     ]|filter|join(' ') %}
 
-     {% set defaultUserImageUrl = uploader.default.url(transform)|default(craft.app.assetManager.getPublishedUrl('@shornuk/upload/assetbundles/upload/build/images', true, 'user.png')) %}
+     {% set defaultUserImageUrl = uploader.default.url(transform)|default(craft.app.assetManager.getPublishedUrl('@findarace/upload/assetbundles/upload/build/images', true, 'user.png')) %}
 
     {# Calculate Dimentions #}
     {% set width = uploader.width ?? false %}

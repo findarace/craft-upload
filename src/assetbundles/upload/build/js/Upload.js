@@ -308,7 +308,7 @@ var UploadAssets = (function() {
 				updateUploadProgress(asset.qid, progress + '%');
 			};
 
-			xhr.open("POST", "/", true);
+			xhr.open("POST", settings.ajaxUrl, true);
 			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 			xhr.setRequestHeader("Accept", "application/json");
 
@@ -355,7 +355,7 @@ var UploadAssets = (function() {
 		api.canUploadAssets = function(success) {
 
 			var xhr = new XMLHttpRequest();
-			xhr.open("POST", "/", true);
+			xhr.open("POST", settings.ajaxUrl, true);
 			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 			xhr.setRequestHeader("Accept", "application/json");
 
@@ -673,7 +673,7 @@ var UploadUserPhoto = (function() {
 			// Request
 			var xhr = new XMLHttpRequest();
 
-			xhr.open("POST", "/", true);
+			xhr.open("POST", settings.ajaxUrl, true);
 			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 			xhr.setRequestHeader("Accept", "application/json");
 
@@ -756,7 +756,7 @@ var UploadUserPhoto = (function() {
 			// Request
 			var xhr = new XMLHttpRequest();
 
-			xhr.open("POST", "/", true);
+			xhr.open("POST", settings.ajaxUrl, true);
 			xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
 			xhr.setRequestHeader("Accept", "application/json");
 

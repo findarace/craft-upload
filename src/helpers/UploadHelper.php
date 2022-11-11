@@ -1,6 +1,6 @@
 <?php
 
-namespace shornuk\upload\helpers;
+namespace findarace\upload\helpers;
 
 use Craft;
 use craft\web\View;
