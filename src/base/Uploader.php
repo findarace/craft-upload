@@ -1,15 +1,16 @@
 <?php
-namespace shornuk\upload\base;
+namespace findarace\upload\base;
 
-use shornuk\upload\Upload;
-use shornuk\upload\base\UploaderInterface;
-use shornuk\upload\helpers\UploadHelper;
-use shornuk\upload\assetbundles\upload\UploadAssetBundle;
+use findarace\upload\Upload;
+use findarace\upload\base\UploaderInterface;
+use findarace\upload\helpers\UploadHelper;
+use findarace\upload\assetbundles\upload\UploadAssetBundle;
 
 use Craft;
 use craft\web\View;
 use craft\base\Model;
 use craft\helpers\Json as JsonHelper;
+use craft\helpers\UrlHelper;
 
 abstract class Uploader extends Model implements UploaderInterface
 {
@@ -86,6 +87,7 @@ abstract class Uploader extends Model implements UploaderInterface
             'debug' => $config->devMode,
             'csrfTokenName' => $config->csrfTokenName,
             'csrfTokenValue' => Craft::$app->getRequest()->getCsrfToken(),
+            'ajaxUrl' => UrlHelper::baseSiteUrl(),
         ];
     }
 

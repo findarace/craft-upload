@@ -3,6 +3,11 @@
 
 ## [Unreleased]
 
+## 1.0.8 - 2022-11-11
+
+*   Migrate to findarace
+*	Fix ajax requests for a baseUrl with a subfolders
+
 ## 1.0.7 - 2021-02-20
 
 *   Fixed asset preview in uploader

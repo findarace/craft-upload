@@ -1,8 +1,8 @@
 <?php
-namespace shornuk\upload\models;
+namespace findarace\upload\models;
 
-use shornuk\upload\Upload;
-use shornuk\upload\base\Uploader;
+use findarace\upload\Upload;
+use findarace\upload\base\Uploader;
 
 use Craft;
 use craft\base\VolumeInterface;

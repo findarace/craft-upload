@@ -21,7 +21,7 @@ To install the plugin, follow these steps:
 
 1.  Install with Composer via:
 
-        composer require fruitstudios/uploadit
+        composer require findarace/upload
 
 2.  In the Control Panel, go to Settings → Plugins and click the “Install” button for Uploadit.
 
@@ -29,7 +29,7 @@ To install the plugin, follow these steps:
 
 **Options**
 
-    {{ craft.uploadit.uploader({
+    {{ craft.upload.uploader({
     	id: 'myUid',
     	name: 'myFieldName',
         assets: [],
@@ -124,7 +124,7 @@ You can also define whether lists can give away, give and keep a copy (`clone`),
 
 **Example Standalone Usage**
 
-    {{ craft.uploadit.uploader({
+    {{ craft.upload.uploader({
     	id: 'myUid',
     	name: 'myFieldName',
     	assets: [],
@@ -139,7 +139,7 @@ You can also define whether lists can give away, give and keep a copy (`clone`),
 
 **Example Form Usage**
 
-    {{ craft.uploadit.uploader({
+    {{ craft.upload.uploader({
     	id: 'myUid',
     	name: 'myFieldName',
         assets: [],
