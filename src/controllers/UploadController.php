@@ -1,8 +1,8 @@
 <?php
-namespace shornuk\upload\controllers;
+namespace findarace\upload\controllers;
 
-use shornuk\upload\Upload;
-use shornuk\upload\helpers\UploadHelper;
+use findarace\upload\Upload;
+use findarace\upload\helpers\UploadHelper;
 
 use Craft;
 use craft\web\Controller;

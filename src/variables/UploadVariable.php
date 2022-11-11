@@ -1,14 +1,14 @@
 <?php
-namespace shornuk\upload\variables;
+namespace findarace\upload\variables;
 
-use shornuk\upload\models\Uploader; // DEPRICIATE
+use findarace\upload\models\Uploader; // DEPRICIATE
 
-use shornuk\upload\Upload;
-use shornuk\upload\assetbundles\upload\UploadAssetBundle;
-use shornuk\upload\base\UploaderInterface;
-use shornuk\upload\models\VolumeUploader;
-use shornuk\upload\models\FieldUploader;
-use shornuk\upload\models\UserPhotoUploader;
+use findarace\upload\Upload;
+use findarace\upload\assetbundles\upload\UploadAssetBundle;
+use findarace\upload\base\UploaderInterface;
+use findarace\upload\models\VolumeUploader;
+use findarace\upload\models\FieldUploader;
+use findarace\upload\models\UserPhotoUploader;
 
 use Craft;
 use craft\web\View;

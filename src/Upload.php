@@ -4,14 +4,14 @@
  *
  * Front end asset upload tools for Craft CMS
  *
- * @link      http://shornuk.co.uk
+ * @link      http://findarace.co.uk
  * @copyright Copyright (c) 2018 Fruit Studios
  */
 
-namespace shornuk\upload;
+namespace findarace\upload;
 
-use shornuk\upload\services\UploadService;
-use shornuk\upload\variables\UploadVariable;
+use findarace\upload\services\UploadService;
+use findarace\upload\variables\UploadVariable;
 
 use Craft;
 use craft\base\Plugin;

@@ -1,5 +1,5 @@
 <?php
-namespace shornuk\upload\base;
+namespace findarace\upload\base;
 
 use Craft;
 use craft\base\ComponentInterface;

@@ -1,10 +1,10 @@
 <?php
-namespace shornuk\upload\models;
+namespace findarace\upload\models;
 
-use shornuk\upload\Upload;
-use shornuk\upload\assetbundles\upload\UploadAssetBundle;
-use shornuk\upload\base\Uploader;
-use shornuk\upload\helpers\UploadHelper;
+use findarace\upload\Upload;
+use findarace\upload\assetbundles\upload\UploadAssetBundle;
+use findarace\upload\base\Uploader;
+use findarace\upload\helpers\UploadHelper;
 
 use Craft;
 use craft\base\ElementInterface;

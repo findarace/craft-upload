@@ -1,5 +1,5 @@
 <?php
-namespace shornuk\upload\assetbundles\upload;
+namespace findarace\upload\assetbundles\upload;
 
 use Craft;
 
@@ -14,7 +14,7 @@ class UploadAssetBundle extends AssetBundle
 
     public function init()
     {
-        $this->sourcePath = "@shornuk/upload/assetbundles/upload/build";
+        $this->sourcePath = "@findarace/upload/assetbundles/upload/build";
 
         $this->depends = [];
 
