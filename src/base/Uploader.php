@@ -119,6 +119,7 @@ abstract class Uploader extends Model implements UploaderInterface
     {
         $this->_checkTransformExists();
         $this->setTarget();
+        return parent::beforeValidate();
     }
 
     public function getJavascriptProperties(): array

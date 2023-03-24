@@ -82,6 +82,11 @@ class UploadHelper
         return $fieldId ? Craft::$app->getFields()->getFieldById($fieldId) : false;
     }
 
+    public static function getFieldById(string $id)
+    {
+        return Craft::$app->getFields()->getFieldById($id);
+    }
+
     public static function getFieldIdByHandle(string $handle)
     {
         self::_buildFieldsMap();
