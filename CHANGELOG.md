@@ -3,6 +3,10 @@
 
 ## [Unreleased]
 
+## 1.0.9 - 2023-03-24
+
+*   PHPStan fixes
+
 ## 1.0.8 - 2022-11-11
 
 *   Migrate to findarace
