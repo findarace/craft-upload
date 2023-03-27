@@ -3,6 +3,10 @@
 
 ## [Unreleased]
 
+## 1.1.0 - 2023-03-27
+
+*   PHPStan fixes
+
 ## 1.0.9 - 2023-03-24
 
 *   PHPStan fixes

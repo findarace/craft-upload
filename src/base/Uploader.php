@@ -111,7 +111,7 @@ abstract class Uploader extends Model implements UploaderInterface
 
         $rules = parent::rules();
         $rules[] = [['id'], 'required'];
-        $rules[] = [['maxSize'], 'integer', 'max' => $this->_defaultMaxUploadFileSize, 'message' => Craft::t('upload', 'Max file can\'t be greater than the global setting maxUploadFileSize')];
+        $rules[] = [['maxSize'], 'integer', 'max' => $this->maxSize, 'message' => Craft::t('upload', 'Max file can\'t be greater than the global setting maxUploadFileSize')];
         return $rules;
     }
 

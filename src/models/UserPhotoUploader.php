@@ -62,7 +62,6 @@ class UserPhotoUploader extends Uploader
     public function rules()
     {
         $rules = parent::rules();
-        $rules[] = [['name'], 'required'];
         $rules[] = [['width', 'height'], 'number'];
         $rules[] = [['imageClasses'], 'string'];
         return $rules;
