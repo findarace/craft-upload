@@ -39,7 +39,7 @@ class FieldUploader extends Uploader
         $this->setAttributes($attributes, false);
     }
 
-    public function rules()
+    public function rules(): array
     {
         $rules = parent::rules();
         $rules[] = [['name'], 'required'];
@@ -88,7 +88,7 @@ class FieldUploader extends Uploader
             'fieldId' => $field->id,
             'elementId' => $element->id ?? ''
         ];
-        $this->limit = $field->limit ? $field->limit : null;
+        $this->limit = $field->maxRelations ? $field->maxRelations : null;
         $this->allowedFileExtensions = UploadHelper::getAllowedFileExtensionsByFieldKinds($field->allowedKinds);
 
         return true;

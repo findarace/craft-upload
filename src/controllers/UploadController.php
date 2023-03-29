@@ -17,7 +17,7 @@ class UploadController extends Controller
     // Protected Properties
     // =========================================================================
 
-    protected $allowAnonymous = ['index', 'can-upload'];
+    protected array|int|bool $allowAnonymous = ['index', 'can-upload'];
 
     // Public Methods
     // =========================================================================

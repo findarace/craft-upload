@@ -40,7 +40,7 @@ class VolumeUploader extends Uploader
         $this->enableRemove = false;
     }
 
-    public function rules()
+    public function rules(): array
     {
         $rules = parent::rules();
         $rules[] = [['id'], 'required'];

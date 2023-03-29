@@ -105,7 +105,7 @@ abstract class Uploader extends Model implements UploaderInterface
         ]);
     }
 
-    public function rules()
+    public function rules(): array
     {
         // IDEA: Should target use this for validation: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-core-validators#filter
 
@@ -177,7 +177,7 @@ abstract class Uploader extends Model implements UploaderInterface
     {
         if(is_string($this->transform) && !empty($this->transform))
         {
-            if(!Craft::$app->getAssetTransforms()->getTransformByHandle($this->transform))
+            if(!Craft::$app->getImageTransforms()->getTransformByHandle($this->transform))
             {
                 $this->addError('transform', Craft::t('upload', 'Asset transform does not exist'));
                 return false;

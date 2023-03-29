@@ -59,7 +59,7 @@ class UserPhotoUploader extends Uploader
 
     }
 
-    public function rules()
+    public function rules(): array
     {
         $rules = parent::rules();
         $rules[] = [['width', 'height'], 'number'];
