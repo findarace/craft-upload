@@ -1,6 +1,6 @@
-# Uploadit plugin for Craft CMS 3.x
+# Upload plugin for Craft CMS
 
-The unausuming front end asset uploader for Craft 3.
+The unassuming front end asset uploader for Craft CMS.
 Use as a standalone uploader or as field in one of your forms:
 
 ## Features:
@@ -13,7 +13,7 @@ Use as a standalone uploader or as field in one of your forms:
 
 ### Requirements
 
-This plugin requires Craft CMS 3.0.0-RC1 or later.
+This plugin requires Craft CMS 4.0.0 or later.
 
 ### Installation
 
@@ -159,4 +159,4 @@ You can also define whether lists can give away, give and keep a copy (`clone`),
 
 Note: This plugin will become a paid add-on when the Craft Plugin store becomes available.
 
-Brought to you by [FRUIT](https://fruitstudios.co.uk)
+Brought to you by [findarace.com](https://findarace.com)
