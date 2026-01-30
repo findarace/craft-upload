@@ -103,17 +103,42 @@ class UploadHelper
                 ->from(['{{%fields}}'])
                 ->all();
 
-            $matrixFieldTypes =  (new Query())
-                ->select(['matrixblocktypes.id', 'matrixblocktypes.handle', 'fields.handle as fieldHandle'])
-                ->from(['{{%matrixblocktypes}} matrixblocktypes'])
-                ->orderBy('matrixblocktypes.id')
-                ->innerJoin('{{%fields}} fields', '[[fields.id]] = [[matrixblocktypes.fieldId]]')
+            // In Craft 5, Matrix blocks are now entries with entry types
+            // Get the relationship between Matrix fields and their entry types through field settings
+            $matrixFields = (new Query())
+                ->select(['id', 'handle', 'settings'])
+                ->where(['type' => 'craft\\fields\\Matrix'])
+                ->from(['{{%fields}}'])
+                ->all();
+
+            // Build a mapping of entry type handles to their parent field handles
+            $entryTypeHandleToField = [];
+            foreach ($matrixFields as $matrixField) {
+                $settings = json_decode($matrixField['settings'], true);
+                if (isset($settings['entryTypes']) && is_array($settings['entryTypes'])) {
+                    foreach ($settings['entryTypes'] as $entryTypeConfig) {
+                        $entryTypeHandle = $entryTypeConfig['handle'] ?? null;
+                        if ($entryTypeHandle) {
+                            $entryTypeHandleToField[$entryTypeHandle] = $matrixField['handle'];
+                        }
+                    }
+                }
+            }
+
+            // Now get all entry types and match them to their field handles
+            $allEntryTypes = (new Query())
+                ->select(['id', 'handle'])
+                ->from(['{{%entrytypes}}'])
                 ->all();
 
             $matrixFieldsContext = [];
-            foreach ($matrixFieldTypes as $matrixFieldType)
+            foreach ($allEntryTypes as $entryType)
             {
-                $matrixFieldsContext['matrixBlockType:'.$matrixFieldType['id']] = $matrixFieldType['fieldHandle'].':'.$matrixFieldType['handle'].':';
+                if (isset($entryTypeHandleToField[$entryType['handle']])) {
+                    // Build context mapping for nested entry fields (formerly matrix blocks)
+                    $fieldHandle = $entryTypeHandleToField[$entryType['handle']];
+                    $matrixFieldsContext['entryType:'.$entryType['id']] = $fieldHandle.':'.$entryType['handle'].':';
+                }
             }
 
             $fieldMap = [];

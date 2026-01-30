@@ -1,6 +1,10 @@
 # Upload Changelog
 > Front-end asset upload for user photos, fields, volumes and folders for [Craft 3](http://craftcms.com)
 
+## 5.0.0 - 2025-10-27
+
+* Craft 5 compatible version
+
 ## [Unreleased]
 
 ## 1.1.0 - 2023-03-27
